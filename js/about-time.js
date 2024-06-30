@@ -8,7 +8,7 @@ console.log(ms(60000, { long: true }))
 formatTime()
 
 function formatTime() {
-    fs.readFile('time-stamps.txt', 'utf8', (err, content) => {
+    fs.readFile('data/time-stamps.txt', 'utf8', (err, content) => {
         if (err) return console.log('Cannot read file', err)
         const stamps = content.split('\r\n')
         const now = Date.now()
